@@ -1,0 +1,26 @@
+{
+  "name": "fem-intro_to_react_brian_holt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MajaSveljo/FEM_Intro_to_react_Brian_Holt.git"
+  },
+  "author": "Maja Perić",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MajaSveljo/FEM_Intro_to_react_Brian_Holt/issues"
+  },
+  "homepage": "https://github.com/MajaSveljo/FEM_Intro_to_react_Brian_Holt#readme",
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "prettier": "^2.2.1"
+  }
+}
