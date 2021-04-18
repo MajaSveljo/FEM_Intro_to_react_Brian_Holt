@@ -1,11 +1,13 @@
 import React from "react";
 import pet from "@frontendmasters/pet";
 import Carousel from "./Carousel";
+import ErrorBoundary from "./ErrorBoundary";
 
 class Details extends React.Component {
   state = { loading: true };
 
   componentDidMount() {
+    // throw new Error("lol");
     pet.animal(this.props.id).then(({ animal }) => {
       this.setState({
         name: animal.name,
@@ -40,4 +42,14 @@ class Details extends React.Component {
   }
 }
 
-export default Details;
+// doing this because ErrorBoundary catches errors only in it's children
+// it wouldn't work the same if it was in return above because
+// it would only catch errors from Carousel and not from the
+// whole component around it
+export default function DetailsWithErrorBoundary(props) {
+  return (
+    <ErrorBoundary>
+      <Details {...props} />
+    </ErrorBoundary>
+  );
+}
